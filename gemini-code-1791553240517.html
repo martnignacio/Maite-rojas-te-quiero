@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrición y Bienestar | Tu Guía Dietética</title>
+    <!-- Enlace a los estilos CSS externos -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Iconos de FontAwesome para mejorar el diseño -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- CABECERA Y NAVEGACIÓN -->
+    <header class="header">
+        <div class="container nav-container">
+            <h1 class="logo"><i class="fa-solid fa-leaf"></i> NutriVida</h1>
+            <nav class="nav">
+                <a href="#inicio">Inicio</a>
+                <a href="#calculadora">Calculadora</a>
+                <a href="#recetas">Recetas</a>
+                <a href="#consejos">Consejos</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- SECCIÓN HERO / INICIO -->
+    <section id="inicio" class="hero">
+        <div class="container hero-content">
+            <h2>Alimenta tu cuerpo, transforma tu vida</h2>
+            <p>Descubre herramientas prácticas, recetas saludables y el asesoramiento que necesitas para alcanzar tus objetivos de bienestar y salud óptima.</p>
+            <a href="#calculadora" class="btn">Empezar Ahora</a>
+        </div>
+    </section>
+
+    <!-- SECCIÓN CALCULADORA NUTRICIONAL -->
+    <section id="calculadora" class="section">
+        <div class="container">
+            <h2 class="section-title">Calculadora de Calorías e IMC</h2>
+            <p class="section-subtitle">Calcula tu índice de masa corporal y tus calorías diarias recomendadas.</p>
+            
+            <div class="calc-card">
+                <form id="calc-form">
+                    <div class="form-group">
+                        <label for="peso">Peso (kg):</label>
+                        <input type="number" id="peso" step="0.1" required placeholder="Ej. 70">
+                    </div>
+                    <div class="form-group">
+                        <label for="altura">Altura (cm):</label>
+                        <input type="number" id="altura" required placeholder="Ej. 175">
+                    </div>
+                    <div class="form-group">
+                        <label for="edad">Edad:</label>
+                        <input type="number" id="edad" required placeholder="Ej. 25">
+                    </div>
+                    <div class="form-group">
+                        <label for="genero">Género:</label>
+                        <select id="genero">
+                            <option value="hombre">Hombre</option>
+                            <option value="mujer">Mujer</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="actividad">Nivel de Actividad:</label>
+                        <select id="actividad">
+                            <option value="1.2">Sedentario (poco o nada ejercicio)</option>
+                            <option value="1.375">Ligero (ejercicio 1-3 días/semana)</option>
+                            <option value="1.55">Moderado (ejercicio 3-5 días/semana)</option>
+                            <option value="1.725">Intenso (ejercicio 6-7 días/semana)</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-block">Calcular</button>
+                </form>
+
+                <div id="resultado" class="result-box hidden">
+                    <h3>Resultados:</h3>
+                    <p id="res-imc"></p>
+                    <p id="res-calorias"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN GENERADOR DE RECETAS SALUDABLES -->
+    <section id="recetas" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Ideales para tu Dieta</h2>
+            <p class="section-subtitle">Haz clic en el botón para obtener una idea de receta saludable instantánea.</p>
+            
+            <div class="recipe-card">
+                <div id="recipe-display">
+                    <h3 id="recipe-title">¡Pulsa el botón para generar una receta!</h3>
+                    <p id="recipe-desc">Aquí aparecerán los ingredientes y la preparación.</p>
+                </div>
+                <button id="btn-receta" class="btn">Generar Receta Saludable</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN CONSEJOS NUTRICIONALES -->
+    <section id="consejos" class="section">
+        <div class="container">
+            <h2 class="section-title">Consejos Clave de Nutrición</h2>
+            <div class="grid-consejos">
+                <div class="consejo-item">
+                    <i class="fa-solid fa-droplet"></i>
+                    <h3>Hidratación</h3>
+                    <p>Bebe al menos de 2 a 2.5 litros de agua al día para mantener tus órganos funcionando de forma óptima.</p>
+                </div>
+                <div class="consejo-item">
+                    <i class="fa-solid fa-carrot"></i>
+                    <h3>Colores en el Plato</h3>
+                    <p>Cuantos más colores naturales tenga tu plato, mayor variedad de antioxidantes y micronutrientes estarás consumiendo.</p>
+                </div>
+                <div class="consejo-item">
+                    <i class="fa-solid fa-stopwatch"></i>
+                    <h3>Comer Consciente</h3>
+                    <p>Tómate tu tiempo para masticar bien los alimentos; esto mejora la digestión y la señal de saciedad en tu cerebro.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+        <p>&copy; 2026 NutriVida - Creado para GitHub con fines educativos y de salud.</p>
+    </footer>
+
+    <!-- Enlace al archivo JavaScript externo -->
+    <script src="script.js"></script>
+</body>
+</html>
